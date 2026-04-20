@@ -1,16 +1,18 @@
 @layer theme {
     :root {
         /* background  */
-        --color-bg-primary: ;
-        --color-bg-alt: ;
-        --color-bg-form: ;
+        --color-bg-primary: #D7DBEC;
+        --color-bg-alt: #FFFFFF;
+        --color-bg-navbar: #070B1D;
+        --color-bg-sidbar: #1E2753;
+        --color-bg-form: #A1A7C4;
 
         /* text  */
-        --color-text-primary: ;
+        --color-text-primary: #131523;
         --color-text-secondary: ;
         --color-text-alt: ;
         --color-text-disabled: ;
-        --color-text-base: ;
+        --color-text-base: #FFFFFF;
 
         /* font  */
         --font-sans: "Inter", sans-serif;

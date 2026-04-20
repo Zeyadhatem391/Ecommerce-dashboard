@@ -9,7 +9,7 @@ interface Props {
   children: ReactNode;
 }
 
-export default function Title({
+export default function Titel({
   size = "md",
   variant = "base",
   className,
