@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../style/variables.css";
 
 
 @layer base {
@@ -19,6 +20,14 @@
 
     .ds-bg-alt {
         background-color: var(--color-bg-alt);
+    }
+
+    .ds-bg-navbar {
+        background-color: var(--color-bg-navbar);
+    }
+
+    .ds-bg-sidbar {
+        background-color: var(--color-bg-sidbar);
     }
 
     .ds-bg-form {
