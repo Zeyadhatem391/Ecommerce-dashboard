@@ -107,3 +107,39 @@
         color: var(--hover-color-text-nav);
     }
 }
+
+.custom-scroll {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.custom-scroll::-webkit-scrollbar {
+    width: 4px;
+    /* رفيع جدًا */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+    /* مفيش خلفية */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    /* رمادي خفيف */
+    border-radius: 999px;
+    /* دايري من فوق وتحت */
+    transition: background 0.3s ease;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* إزالة أي arrows (احتياطيًا لبعض الأنظمة القديمة) */
+.custom-scroll::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}
