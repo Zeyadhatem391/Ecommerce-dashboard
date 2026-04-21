@@ -13,7 +13,7 @@ import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 import { CiSettings } from "react-icons/ci";
 
 export const menus = [
-    { icon: BiHome, name: "Dashboard", link: "/dashboard" },
+    { icon: BiHome, name: "Dashboard", link: "/" },
     { icon: FiShoppingCart, name: "Orders", link: "/orders" },
     { icon: MdOutlineInventory2, name: "Products", link: "/products" },
     { icon: BiCategory, name: "Categories", link: "/categories" },
