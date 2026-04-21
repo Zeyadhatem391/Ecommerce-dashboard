@@ -1,5 +1,6 @@
 import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
+import PaginationSection from "@/components/molecules/PaginationSection";
 import Toolbar from "@/components/molecules/Toolbar";
 
 const dataTable = [
@@ -62,7 +63,7 @@ export default function OrdersPage() {
         <Toolbar />
 
         <table className="w-full table-fixed ">
-          <thead className="border-b-2 border-gray-300">
+          <thead className="border-b-2 border-gray-200">
             <tr className="ds-text-disabled">
               <th className="w-1/6 text-left p-3 font-normal">
                 <div className="flex items-center gap-3">
@@ -87,18 +88,18 @@ export default function OrdersPage() {
                 key={item.id}
                 className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition"
               >
-                <td className="w-1/6 p-3">
+                <td className="w-1/6 px-3 py-4 ">
                   <div className="flex items-center gap-3">
                     <input type="checkbox" className="w-4 h-4 cursor-pointer" />
                     <span>#{item.id}</span>
                   </div>
                 </td>
 
-                <td className="w-1/6 p-3">{item.date}</td>
+                <td className="w-1/6   px-3 py-4">{item.date}</td>
 
-                <td className="w-1/6 p-3">{item.customer}</td>
+                <td className="w-1/6   px-3 py-4">{item.customer}</td>
 
-                <td className="w-1/6 p-3">
+                <td className="w-1/6   px-3 py-4">
                   <span
                     className={`font-medium px-2.5 py-1.5 rounded-sm ${paymentStyle(
                       item.paymentStatus,
@@ -108,7 +109,7 @@ export default function OrdersPage() {
                   </span>
                 </td>
 
-                <td className="w-1/6 p-3">
+                <td className="w-1/6   px-3 py-4">
                   <span
                     className={`font-medium px-2.5 py-1.5 rounded-sm text-white ${orderStyle(
                       item.orderStatus,
@@ -118,11 +119,13 @@ export default function OrdersPage() {
                   </span>
                 </td>
 
-                <td className="w-1/6 p-3">{item.total}</td>
+                <td className="w-1/6   px-3 py-4">{item.total}</td>
               </tr>
             ))}
           </tbody>
         </table>
+
+        <PaginationSection />
       </div>
     </DashbordLayout>
   );
