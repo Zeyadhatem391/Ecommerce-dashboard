@@ -2,33 +2,7 @@ import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
 import PaginationSection from "@/components/molecules/PaginationSection";
 import Toolbar from "@/components/molecules/Toolbar";
-
-const dataTable = [
-  {
-    id: "12512B",
-    date: "May 5, 4:20 PM",
-    customer: "Tom Anderson",
-    paymentStatus: "Paid",
-    orderStatus: "Ready",
-    total: "$49.90",
-  },
-  {
-    id: "12513C",
-    date: "May 6, 2:10 PM",
-    customer: "Sarah Johnson",
-    paymentStatus: "Pending",
-    orderStatus: "Shipped",
-    total: "$89.00",
-  },
-  {
-    id: "12514D",
-    date: "May 7, 1:00 PM",
-    customer: "Michael Brown",
-    paymentStatus: "Paid",
-    orderStatus: "Received",
-    total: "$120.50",
-  },
-];
+import { orderData } from "@/data/Orders";
 
 const paymentStyle = (status: string) => {
   switch (status) {
@@ -83,7 +57,7 @@ export default function OrdersPage() {
           </thead>
 
           <tbody>
-            {dataTable.map((item) => (
+            {orderData.map((item) => (
               <tr
                 key={item.id}
                 className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition"

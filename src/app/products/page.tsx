@@ -1,42 +1,10 @@
-import { Product1 } from "@/assets/images/images";
 import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
 import PaginationSection from "@/components/molecules/PaginationSection";
 import Toolbar from "@/components/molecules/Toolbar";
+import { productData } from "@/data/Products";
 import Image from "next/image";
 
-const dataTable = [
-  {
-    id: "1",
-    titel: "Men Grey Hoodie",
-    type: "Hoodies",
-    image: Product1,
-    inventory: "96 in stock",
-    color: "black",
-    price: "$49.90",
-    rating: "5.0 (32 Votes)",
-  },
-  {
-    id: "2",
-    titel: "Men Grey Hoodie",
-    type: "Hoodies",
-    image: Product1,
-    inventory: "96 in stock",
-    color: "black",
-    price: "$49.90",
-    rating: "5.0 (32 Votes)",
-  },
-  {
-    id: "3",
-    titel: "Women Striped T-Shirt",
-    type: "Hoodies",
-    image: Product1,
-    inventory: "Out of Stock",
-    color: "black",
-    price: "$49.90",
-    rating: "5.0 (32 Votes)",
-  },
-];
 
 const InventoryStyle = (status: string) => {
   switch (status) {
@@ -73,7 +41,7 @@ export default function ProductsPage() {
           </thead>
 
           <tbody>
-            {dataTable.map((item) => (
+            {productData.map((item) => (
               <tr
                 key={item.id}
                 className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition"
