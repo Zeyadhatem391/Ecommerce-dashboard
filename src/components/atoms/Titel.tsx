@@ -2,8 +2,8 @@ import { cn } from "@/lib/cn";
 import { ReactNode } from "react";
 
 interface Props {
-  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" |  "4xl" | "5xl";
-  variant?: "base";
+  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+  variant?: "base" | "primary";
   className?: string;
   center?: boolean;
   children: ReactNode;
@@ -28,6 +28,7 @@ export default function Titel({
   };
 
   const variants = {
+    primary: "ds-text-primary ",
     base: "ds-text-base",
   };
   return (
