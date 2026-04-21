@@ -1,8 +1,8 @@
+import { Product1 } from "@/assets/images/images";
 import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
 import PaginationSection from "@/components/molecules/PaginationSection";
 import Toolbar from "@/components/molecules/Toolbar";
-import Product1 from "@/assets/images/Image.png";
 import Image from "next/image";
 
 const dataTable = [

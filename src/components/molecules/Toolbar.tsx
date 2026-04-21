@@ -1,4 +1,4 @@
-import { Pencil, Trash2 } from "lucide-react";
+import { Pencil, Trash2 } from "@/assets/icons/icons";
 
 export default function Toolbar() {
   return (
