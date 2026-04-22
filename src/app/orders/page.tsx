@@ -1,32 +1,9 @@
 import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
+import OrderCard from "@/components/molecules/OrderCard";
 import PaginationSection from "@/components/molecules/PaginationSection";
 import Toolbar from "@/components/molecules/Toolbar";
 import { orderData } from "@/data/Orders";
-
-const paymentStyle = (status: string) => {
-  switch (status) {
-    case "Paid":
-      return "bg-green-100 text-green-700";
-    case "Pending":
-      return "bg-gray-100 text-gray-700";
-    default:
-      return "bg-gray-100 text-gray-600";
-  }
-};
-
-const orderStyle = (status: string) => {
-  switch (status) {
-    case "Ready":
-      return "bg-orange-400 ";
-    case "Shipped":
-      return "bg-purple-900 ";
-    case "Received":
-      return "bg-blue-500 ";
-    default:
-      return "bg-gray-100 ";
-  }
-};
 
 export default function OrdersPage() {
   return (
@@ -58,43 +35,7 @@ export default function OrdersPage() {
 
           <tbody>
             {orderData.map((item) => (
-              <tr
-                key={item.id}
-                className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition"
-              >
-                <td className="w-1/6 px-3 py-4 ">
-                  <div className="flex items-center gap-3">
-                    <input type="checkbox" className="w-4 h-4 cursor-pointer" />
-                    <span>#{item.id}</span>
-                  </div>
-                </td>
-
-                <td className="w-1/6   px-3 py-4">{item.date}</td>
-
-                <td className="w-1/6   px-3 py-4">{item.customer}</td>
-
-                <td className="w-1/6   px-3 py-4">
-                  <span
-                    className={`font-medium px-2.5 py-1.5 rounded-sm ${paymentStyle(
-                      item.paymentStatus,
-                    )}`}
-                  >
-                    {item.paymentStatus}
-                  </span>
-                </td>
-
-                <td className="w-1/6   px-3 py-4">
-                  <span
-                    className={`font-medium px-2.5 py-1.5 rounded-sm text-white ${orderStyle(
-                      item.orderStatus,
-                    )}`}
-                  >
-                    {item.orderStatus}
-                  </span>
-                </td>
-
-                <td className="w-1/6   px-3 py-4">{item.total}</td>
-              </tr>
+              <OrderCard key={item.id} {...item} />
             ))}
           </tbody>
         </table>

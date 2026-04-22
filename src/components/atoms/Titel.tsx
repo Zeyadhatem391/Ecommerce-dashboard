@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface Props {
   size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
-  variant?: "base" | "primary";
+  variant?: "primary" | "secondary" | "alt" | "base" | "disabled";
   className?: string;
   center?: boolean;
   children: ReactNode;
@@ -11,7 +11,7 @@ interface Props {
 
 export default function Titel({
   size = "md",
-  variant = "base",
+  variant = "primary",
   className,
   center = false,
   children,
@@ -28,8 +28,11 @@ export default function Titel({
   };
 
   const variants = {
-    primary: "ds-text-primary ",
+    secondary: "ds-text-secondary",
+    alt: "ds-text-alt ",
     base: "ds-text-base",
+    primary: "ds-text-primary",
+    disabled: "ds-text-disabled",
   };
   return (
     <h2
