@@ -34,7 +34,7 @@ export default function ProductCard({
           <input type="checkbox" className="w-4 h-4 cursor-pointer" />
           <div className="flex gap-4">
             <Images src={image} alt="Product" width={60} height={15} />
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 items-center">
               <span>{titel}</span>
               <span className="ds-text-disabled">{type}</span>
             </div>
