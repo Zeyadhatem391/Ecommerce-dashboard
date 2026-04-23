@@ -2,7 +2,7 @@ import DashbordLayout from "@/components/layout/DashbordLayout";
 import AddressSection from "@/components/molecules/AddressSection";
 
 import { categories } from "@/data/Categories";
-import CategoryCard from "../../components/molecules/CategoryCard";
+import CategoryCard from "@/components/molecules/CategoryCard";
 
 export default function CategoriesPage() {
   return (
