@@ -26,7 +26,7 @@ export default function SideBar() {
         </ul>
 
         <div>
-          <p className="text-xs  ds-text-base mb-3 px-4">Other Information</p>
+          <p className="text-gray-300 px-4">Other Information</p>
           <ul className="flex flex-col ">
             {info.map((item, index) => {
               const Icon = item.icon;
@@ -50,7 +50,7 @@ export default function SideBar() {
         </div>
 
         <div>
-          <p className="text-xs ds-text-base mb-3 px-4">Settings</p>
+          <p className="text-gray-300 px-4">Settings</p>
           <ul className="flex flex-col ">
             {settings.map((item, index) => {
               const Icon = item.icon;
