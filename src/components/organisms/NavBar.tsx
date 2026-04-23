@@ -2,6 +2,7 @@ import Logo from "@/assets/images/logo.png";
 import Images from "../atoms/Image";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
+import Button from "../atoms/Button";
 
 export default function NavBar() {
   return (
@@ -13,9 +14,13 @@ export default function NavBar() {
           <IoNotificationsOutline className="w-7 h-7 ds-text-base" />
         </div>
 
-        <div className="cursor-pointer p-2 ">
+        <Button variant="secondary" size="md" tag="link" href="login">
+          Sign in
+        </Button>
+
+        {/* <div className="cursor-pointer p-2 ">
           <FaRegUser className="w-7 h-7 ds-text-base" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

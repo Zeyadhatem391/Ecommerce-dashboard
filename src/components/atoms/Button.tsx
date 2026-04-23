@@ -34,18 +34,17 @@ const Button = ({
     "inline-flex items-center justify-center font-medium transition-all duration-200 hover:scale-[1.04] focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary:
-      "ds-bg-primary text-white capitalize focus:ring-blue-500 cursor-pointer hover:opacity-95",
+    primary: "ds-bg-navbar cursor-pointer text-white opacity-95",
     secondary:
-      "border-2 border-skill text-white capitalize hover:opacity-95 cursor-pointer",
-    ghost: "ds-text-primary-200 capitalize cursor-pointer ds-text-primary",
+      "ds-bg-sidbar text-white hover:opacity-95 cursor-pointer",
+    ghost: "cursor-pointer ds-text-alt  border-2 border-gray-300 ",
     outline1:
       "border-2 ds-text-alt capitalize focus:ring-primary-500 cursor-pointer",
   };
 
   const sizes = {
     sm: "px-3 py-1.5 text-sm",
-    md: "px-5 py-[8px] text-[16px]",
+    md: "px-5 py-2 text-[18px]",
     lg: "px-6 py-3 text-[20px]",
     xl: "px-8 py-4 text-lg",
   };
@@ -56,13 +55,16 @@ const Button = ({
     sizes[size],
     fullWidth && "w-full",
     isRounded ? "rounded-full" : "rounded-md",
-    className
+    className,
   );
 
   return (
-    <div className={center ? "flex justify-center" : undefined}>
+    <div className={center ? "flex justify-center" : "w-full"}>
       {tag === "link" ? (
-        <Link href={href} className={cn(commonClasses, center && "text-center")}>
+        <Link
+          href={href}
+          className={cn(commonClasses, center && "text-center")}
+        >
           {children}
         </Link>
       ) : (
@@ -80,4 +82,4 @@ const Button = ({
   );
 };
 
-export default Button; 
+export default Button;
