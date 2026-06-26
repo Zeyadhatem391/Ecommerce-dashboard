@@ -25,7 +25,6 @@ export const menus = [
 
 export const info = [
     { icon: BiBookOpen, name: "Knowledge Base", link: "/knowledge-base" },
-    { icon: MdOutlineSystemUpdateAlt, name: "Product Updates", link: "/updates" },
 ];
 
 export const settings = [

@@ -1,39 +1,50 @@
-import DashbordLayout from "@/components/layout/DashbordLayout";
-import AddressSection from "@/components/molecules/AddressSection";
-import PaginationSection from "@/components/molecules/PaginationSection";
-import ProductCard from "@/components/molecules/ProductCard";
-import Toolbar from "@/components/molecules/Toolbar";
-import { productData } from "@/data/Products";
+"use client";
 
+import { useEffect, useState } from "react";
+
+import DashbordLayout from "@/shared/components/layout/DashbordLayout";
+import AddressSection from "@/shared/components/molecules/AddressSection";
+import PaginationSection from "@/shared/components/molecules/PaginationSection";
+import ProductCard from "@/modules/products/components/molecules/ProductCard";
+import Toolbar from "@/shared/components/molecules/Toolbar";
+import { productData } from "@/modules/products/data/Products";
+import ButtonsExport from "@/shared/components/molecules/ButtonsExport";
+import TableHeader from "@/shared/components/molecules/TableHeader";
+import { productColumns } from "@/data/TablesHead";
 
 export default function ProductsPage() {
+  const [products, setProducts] = useState(productData);
+
+  useEffect(() => {
+    const localProducts = JSON.parse(
+      localStorage.getItem("products") || "[]"
+    );
+
+    setProducts([...productData, ...localProducts]);
+  }, []);
+
   return (
     <DashbordLayout>
-      <AddressSection titel="Products" />
+      <div className="flex justify-between mb-3">
+        <AddressSection titel="Products" />
 
-      <div className="ds-bg-alt w-full p-4 rounded-md shadow-xs">
+        <ButtonsExport
+          nameButton="Export"
+          nameButtonAdd="Add Product"
+          href="/products/add-product"
+          isIcon
+        />
+      </div>
+
+      <div className="ds-bg-alt w-full rounded-md p-4 shadow-xs">
         <Toolbar />
 
-        <table className="w-full table-fixed ">
-          <thead className="border-b-2 border-gray-200">
-            <tr className="ds-text-disabled">
-              <th className="w-2/6 text-left p-3 font-normal">
-                <div className="flex items-center gap-3">
-                  <input type="checkbox" className="w-4 h-4 cursor-pointer" />
-                  <span>Product</span>
-                </div>
-              </th>
-
-              <th className="w-1/6 text-left p-3 font-normal">Inventory</th>
-              <th className="w-1/6 text-left p-3 font-normal">Color</th>
-              <th className="w-1/6 text-left p-3 font-normal">Price</th>
-              <th className="w-1/6 text-left p-3 font-normal">Rating</th>
-            </tr>
-          </thead>
+        <table className="w-full table-fixed">
+          <TableHeader columns={productColumns} />
 
           <tbody>
-            {productData.map((item) => (
-             <ProductCard key={item.id} {...item} />
+            {products.map((item) => (
+              <ProductCard key={item.id} {...item} />
             ))}
           </tbody>
         </table>

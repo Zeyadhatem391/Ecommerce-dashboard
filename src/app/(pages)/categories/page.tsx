@@ -1,8 +1,8 @@
-import DashbordLayout from "@/components/layout/DashbordLayout";
-import AddressSection from "@/components/molecules/AddressSection";
+import DashbordLayout from "@/shared/components/layout/DashbordLayout";
+import AddressSection from "@/shared/components/molecules/AddressSection";
 
 import { categories } from "@/data/Categories";
-import CategoryCard from "@/components/molecules/CategoryCard";
+import CategoryCard from "@/modules/categories/components/molecules/CategoryCard";
 
 export default function CategoriesPage() {
   return (

@@ -1,7 +1,7 @@
 import Logo from "@/assets/images/logo.png";
 import Images from "../atoms/Image";
 import { IoNotificationsOutline } from "react-icons/io5";
-import { FaRegUser } from "react-icons/fa";
+// import { FaRegUser } from "react-icons/fa";
 import Button from "../atoms/Button";
 
 export default function NavBar() {

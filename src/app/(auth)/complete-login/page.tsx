@@ -1,9 +1,9 @@
 import { Email } from "@/assets/images/images";
-import Images from "@/components/atoms/Image";
-import Text from "@/components/atoms/Text";
-import Titel from "@/components/atoms/Titel";
-import AuthLayout from "@/components/layout/AuthLayout";
-import AltStatue from "@/components/molecules/authComponents/AltStatue";
+import Images from "@/shared/components/atoms/Image";
+import Text from "@/shared/components/atoms/Text";
+import Titel from "@/shared/components/atoms/Titel";
+import AuthLayout from "@/shared/components/layout/AuthLayout";
+import AltStatue from "@/modules/auth/components/molecules/AltStatue";
 
 
 export default function CompleteLogin() {

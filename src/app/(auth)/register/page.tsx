@@ -1,9 +1,9 @@
-import Button from "@/components/atoms/Button";
-import Text from "@/components/atoms/Text";
-import Titel from "@/components/atoms/Titel";
-import AuthLayout from "@/components/layout/AuthLayout";
-import AltSign from "@/components/molecules/authComponents/AltSign";
-import InputForm from "@/components/molecules/authComponents/InputForm";
+import Button from "@/shared/components/atoms/Button";
+import Text from "@/shared/components/atoms/Text";
+import Titel from "@/shared/components/atoms/Titel";
+import AuthLayout from "@/shared/components/layout/AuthLayout";
+import AltSign from "@/modules/auth/components/molecules/AltSign";
+import InputForm from "@/modules/auth/components/molecules/InputForm";
 
 export default function RegisterPage() {
   return (

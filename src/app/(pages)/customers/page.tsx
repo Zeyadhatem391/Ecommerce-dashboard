@@ -1,9 +1,13 @@
-import DashbordLayout from "@/components/layout/DashbordLayout";
-import AddressSection from "@/components/molecules/AddressSection";
-import CustomerCard from "@/components/molecules/CustomerCard";
-import PaginationSection from "@/components/molecules/PaginationSection";
-import Toolbar from "@/components/molecules/Toolbar";
+import DashbordLayout from "@/shared/components/layout/DashbordLayout";
+import AddressSection from "@/shared/components/molecules/AddressSection";
+import PaginationSection from "@/shared/components/molecules/PaginationSection";
+import Toolbar from "@/shared/components/molecules/Toolbar";
 import { customerData } from "@/data/Customer";
+import CustomerCard from "@/modules/customers/components/molecules/CustomerCard";
+import TableHeader from "@/shared/components/molecules/TableHeader";
+import { customerColumns } from "@/data/TablesHead";
+
+
 
 export default function CustomersPage() {
   return (
@@ -14,20 +18,7 @@ export default function CustomersPage() {
         <Toolbar />
 
         <table className="w-full table-fixed ">
-          <thead className="border-b-2 border-gray-200">
-            <tr className="ds-text-disabled">
-              <th className="w-3/6 text-left p-3 font-normal">
-                <div className="flex items-center gap-3">
-                  <input type="checkbox" className="w-4 h-4 cursor-pointer" />
-                  <span>Name</span>
-                </div>
-              </th>
-
-              <th className="w-2/6 text-left p-3 font-normal">Location</th>
-              <th className="w-1/6 text-left p-3 font-normal">Orders</th>
-              <th className="w-1/6 text-left p-3 font-normal">Spent</th>
-            </tr>
-          </thead>
+          <TableHeader columns={customerColumns} />
 
           <tbody>
             {customerData.map((item) => (

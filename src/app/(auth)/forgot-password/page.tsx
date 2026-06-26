@@ -1,9 +1,9 @@
-import Button from "@/components/atoms/Button";
-import Text from "@/components/atoms/Text";
-import Titel from "@/components/atoms/Titel";
-import AuthLayout from "@/components/layout/AuthLayout";
-import AltStatue from "@/components/molecules/authComponents/AltStatue";
-import InputForm from "@/components/molecules/authComponents/InputForm";
+import Button from "@/shared/components/atoms/Button";
+import Text from "@/shared/components/atoms/Text";
+import Titel from "@/shared/components/atoms/Titel";
+import AuthLayout from "@/shared/components/layout/AuthLayout";
+import AltStatue from "@/modules/auth/components/molecules/AltStatue";
+import InputForm from "@/modules/auth/components/molecules/InputForm";
 
 export default function ForgetPassword() {
   return (

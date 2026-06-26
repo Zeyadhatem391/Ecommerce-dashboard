@@ -1,10 +1,10 @@
+import Images from "@/shared/components/atoms/Image";
 import { StaticImageData } from "next/image";
-import Images from "../atoms/Image";
 
 interface Props {
   image: StaticImageData;
-  titel: string;
-  type: string;
+  name: string;
+  category: string;
   inventory: string;
   color: string;
   price: string;
@@ -12,8 +12,8 @@ interface Props {
 }
 export default function ProductCard({
   image,
-  titel,
-  type,
+  name,
+  category,
   inventory,
   color,
   price,
@@ -35,8 +35,8 @@ export default function ProductCard({
           <div className="flex gap-4">
             <Images src={image} alt="Product" width={60} height={15} />
             <div className="flex flex-col gap-1 items-center">
-              <span>{titel}</span>
-              <span className="ds-text-disabled">{type}</span>
+              <span>{name}</span>
+              <span className="ds-text-disabled">{category}</span>
             </div>
           </div>
         </div>

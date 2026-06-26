@@ -1,5 +1,5 @@
-import Images from "@/components/atoms/Image";
-import Titel from "@/components/atoms/Titel";
+import Images from "@/shared/components/atoms/Image";
+import Titel from "@/shared/components/atoms/Titel";
 import { inboxData } from "@/data/Inbox";
 
 

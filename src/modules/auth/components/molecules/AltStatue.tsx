@@ -1,5 +1,5 @@
-import Button from "@/components/atoms/Button";
-import Text from "@/components/atoms/Text";
+import Button from "@/shared/components/atoms/Button";
+import Text from "@/shared/components/atoms/Text";
 
 interface Props {
   titel: string;

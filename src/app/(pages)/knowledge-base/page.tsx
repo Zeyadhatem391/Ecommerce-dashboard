@@ -1,5 +1,5 @@
-import DashbordLayout from "@/components/layout/DashbordLayout";
-import AddressSection from "@/components/molecules/AddressSection";
+import DashbordLayout from "@/shared/components/layout/DashbordLayout";
+import AddressSection from "@/shared/components/molecules/AddressSection";
 
 export default function KnowledgePage() {
   return (

@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-import Images from "../atoms/Image";
 
 interface Props {
   image: StaticImageData;

@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
-import Images from "@/components/atoms/Image";
+import Images from "@/shared/components/atoms/Image";
 import { Pencil } from "@/assets/icons/icons";
-import Titel from "../atoms/Titel";
-import Text from "../atoms/Text";
+import Titel from "@/shared/components/atoms/Titel";
+import Text from "@/shared/components/atoms/Text";
 
 interface Props {
   image: StaticImageData;

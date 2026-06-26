@@ -1,5 +1,5 @@
+import Images from "@/shared/components/atoms/Image";
 import { StaticImageData } from "next/image";
-import Images from "../atoms/Image";
 
 interface Props {
   image: StaticImageData;

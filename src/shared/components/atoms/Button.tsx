@@ -34,12 +34,12 @@ const Button = ({
     "inline-flex items-center justify-center font-medium transition-all duration-200 hover:scale-[1.04] focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "ds-bg-navbar cursor-pointer text-white opacity-95",
+    primary: "bg-blue-500 cursor-pointer text-white opacity-95",
     secondary:
       "ds-bg-sidbar text-white hover:opacity-95 cursor-pointer",
     ghost: "cursor-pointer ds-text-alt  border-2 border-gray-300 ",
     outline1:
-      "border-2 ds-text-alt capitalize focus:ring-primary-500 cursor-pointer",
+      "border-2 ds-text-alt capitalize bg-white cursor-pointer",
   };
 
   const sizes = {
