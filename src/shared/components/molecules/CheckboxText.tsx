@@ -1,5 +1,5 @@
 interface CheckboxTextProps {
-  text: string;
+  text?: string;
   checked?: boolean;
   onChange?: (checked: boolean) => void;
 }

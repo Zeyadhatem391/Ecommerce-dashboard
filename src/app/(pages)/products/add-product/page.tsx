@@ -8,7 +8,7 @@ import AddPageLayout from "@/shared/components/layout/AddPageLayout";
 import { useRouter } from "next/navigation";
 
 export interface Product {
-  id?: number;
+  id?: string;
   name: string;
   description: string;
   image: string;

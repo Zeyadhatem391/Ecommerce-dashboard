@@ -3,6 +3,7 @@ import Images from "@/shared/components/atoms/Image";
 import { Pencil } from "@/assets/icons/icons";
 import Titel from "@/shared/components/atoms/Titel";
 import Text from "@/shared/components/atoms/Text";
+import Link from "next/link";
 
 interface Props {
   image: StaticImageData;
@@ -22,10 +23,12 @@ export default function CategoryCard({ image, titel, numberItems }: Props) {
         />
 
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-          <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-gray-100 transition">
-            <Pencil size={16} />
-            Edit
-          </button>
+          <Link href="categories/edit-category">
+            <button className="flex items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-gray-100 transition">
+              <Pencil size={16} />
+              Edit
+            </button>
+          </Link>
         </div>
       </div>
 

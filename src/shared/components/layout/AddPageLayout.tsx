@@ -6,7 +6,7 @@ import DashbordLayout from "./DashbordLayout";
 interface AddPageLayoutProps {
   children: React.ReactNode;
   titel: string;
-  onSave: () => void;
+  onSave?: () => void;
   onCancel?: () => void;
 }
 

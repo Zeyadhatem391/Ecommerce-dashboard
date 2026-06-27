@@ -3,9 +3,9 @@
 import { Switch } from "@/components/ui/switch";
 
 interface SwitchTextProps {
-  text: string;
-  checked: boolean;
-  onCheckedChange: (checked: boolean) => void;
+  text?: string;
+  checked?: boolean;
+  onCheckedChange?: (checked: boolean) => void;
 }
 
 export default function SwitchText({

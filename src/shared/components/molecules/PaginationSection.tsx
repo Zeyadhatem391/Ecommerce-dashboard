@@ -1,3 +1,4 @@
+import { Product } from "@/app/(pages)/products/add-product/page";
 import {
   Pagination,
   PaginationContent,
@@ -7,7 +8,7 @@ import {
   PaginationNext,
 } from "@/components/ui/pagination";
 
-export default function PaginationSection() {
+export default function PaginationSection({ number }: { number: number }) {
   return (
     <div className="flex items-center justify-between mt-5 px-2">
       <div className="flex items-center">
@@ -38,7 +39,7 @@ export default function PaginationSection() {
         </Pagination>
       </div>
 
-      <div className="ds-text-disabled text-sm">274 Results</div>
+      <div className="ds-text-disabled text-sm">{number} Results</div>
     </div>
   );
 }

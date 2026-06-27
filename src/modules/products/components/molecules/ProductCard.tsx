@@ -2,6 +2,7 @@ import Images from "@/shared/components/atoms/Image";
 import { StaticImageData } from "next/image";
 
 interface Props {
+  id: string;
   image: StaticImageData;
   name: string;
   category: string;
@@ -9,8 +10,12 @@ interface Props {
   color: string;
   price: string;
   rating: string;
+  checked: boolean;
+  onSelect: (id: string) => void;
 }
+
 export default function ProductCard({
+  id,
   image,
   name,
   category,
@@ -18,6 +23,8 @@ export default function ProductCard({
   color,
   price,
   rating,
+  checked,
+  onSelect,
 }: Props) {
   const InventoryStyle = (status: string) => {
     switch (status) {
@@ -27,13 +34,21 @@ export default function ProductCard({
         return "";
     }
   };
+
   return (
     <tr className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition">
-      <td className="w-2/6 p-3 ">
+      <td className="w-2/6 p-3">
         <div className="flex items-center gap-3">
-          <input type="checkbox" className="w-4 h-4 cursor-pointer" />
+          <input
+            type="checkbox"
+            checked={checked}
+            onChange={() => onSelect(id)}
+            className="w-4 h-4 cursor-pointer"
+          />
+
           <div className="flex gap-4">
             <Images src={image} alt="Product" width={60} height={15} />
+
             <div className="flex flex-col gap-1 items-center">
               <span>{name}</span>
               <span className="ds-text-disabled">{category}</span>
@@ -45,7 +60,7 @@ export default function ProductCard({
       <td className="w-1/6 p-3">
         <span
           className={`font-medium px-2.5 py-1.5 rounded-sm ${InventoryStyle(
-            inventory,
+            inventory
           )}`}
         >
           {inventory}
