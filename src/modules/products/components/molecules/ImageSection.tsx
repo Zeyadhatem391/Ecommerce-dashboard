@@ -2,9 +2,9 @@
 
 import { useRef } from "react";
 
-import { Product } from "@/app/(pages)/products/add-product/page";
 import Text from "@/shared/components/atoms/Text";
 import Titel from "@/shared/components/atoms/Titel";
+import { Product } from "../../types/type";
 
 interface Props {
   product: Product;

@@ -3,7 +3,7 @@ import ImageSection from "../molecules/ImageSection";
 import PriceSection from "../molecules/PriceSection";
 import ShippingSection from "../molecules/ShippingSection";
 import OptionsSection from "../molecules/OptionsSection";
-import { Product } from "@/app/(pages)/products/add-product/page";
+import { Product } from "../../types/type";
 
 interface LeftAddProductProps {
   product: Product;

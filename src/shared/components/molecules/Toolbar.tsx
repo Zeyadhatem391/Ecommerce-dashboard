@@ -1,7 +1,7 @@
 import { Pencil, Trash2 } from "@/assets/icons/icons";
 interface Props {
-  onDelete: () => void;
-  selectedCount: number;
+  onDelete?: () => void;
+  selectedCount?: number;
 }
 
 export default function Toolbar({ onDelete, selectedCount }: Props) {

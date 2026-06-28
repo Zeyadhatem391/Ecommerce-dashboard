@@ -6,37 +6,14 @@ import LeftAddProduct from "@/modules/products/components/organisms/LeftAddProdu
 import RightAddProduct from "@/modules/products/components/organisms/RightAddProduct";
 import AddPageLayout from "@/shared/components/layout/AddPageLayout";
 import { useRouter } from "next/navigation";
-
-export interface Product {
-  id?: string;
-  name: string;
-  description: string;
-  image: string;
-  inventory: string;
-  price: string;
-  discountPrice: string;
-  tax: boolean;
-  weight: string;
-  country: string;
-  digital: boolean;
-  category: string[];
-  color: string;
-  tags: string[];
-  colorOption: string;
-  rating: string;
-  seoTitle: string;
-  seoDescription: string;
-  options: boolean;
-  size: string;
-  sizeValue: string;
-}
+import { Product } from "../../../../modules/products/types/type";
 
 export default function AddProducts() {
   const [product, setProduct] = useState<Product>({
     name: "",
     description: "",
     image: "",
-    inventory: "96 in stock",
+    inventory: "",
     price: "",
     discountPrice: "",
     tax: false,
@@ -44,9 +21,8 @@ export default function AddProducts() {
     country: "",
     color: "",
     digital: false,
-    category: [],
+    categoryId: [],
     tags: [],
-    colorOption: "",
     rating: "5.0 (32 Votes)",
     seoTitle: "",
     seoDescription: "",

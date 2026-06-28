@@ -1,3 +1,4 @@
+import { categories } from "@/modules/categories/data/Categories";
 import Images from "@/shared/components/atoms/Image";
 import { StaticImageData } from "next/image";
 
@@ -5,7 +6,7 @@ interface Props {
   id: string;
   image: StaticImageData;
   name: string;
-  category: string;
+  categoryId: string[];
   inventory: string;
   color: string;
   price: string;
@@ -18,7 +19,7 @@ export default function ProductCard({
   id,
   image,
   name,
-  category,
+  categoryId,
   inventory,
   color,
   price,
@@ -26,32 +27,43 @@ export default function ProductCard({
   checked,
   onSelect,
 }: Props) {
-  const InventoryStyle = (status: string) => {
-    switch (status) {
-      case "Out of Stock":
-        return "bg-gray-100 text-gray-600";
-      default:
-        return "";
-    }
+  const getInventoryClass = (inventory: string) => {
+    return inventory === "0" || inventory === ""
+      ? "bg-gray-100 text-gray-600"
+      : "";
   };
 
+  const getInventoryText = (inventory: string) => {
+    return inventory === "0" || inventory === ""
+      ? "Out of Stock"
+      : `${inventory} in Stock`;
+  };
+
+  const categoryNames = categories
+    .filter((category) => categoryId.includes(category.id))
+    .map((category) => category.title)
+    .join(", ");
+
   return (
-    <tr className="ds-text-primary border-b border-gray-100 hover:bg-gray-50 transition">
+    <tr className="ds-text-primary border-b border-gray-100 transition hover:bg-gray-50">
       <td className="w-2/6 p-3">
         <div className="flex items-center gap-3">
           <input
             type="checkbox"
             checked={checked}
             onChange={() => onSelect(id)}
-            className="w-4 h-4 cursor-pointer"
+            className="h-4 w-4 cursor-pointer"
           />
 
           <div className="flex gap-4">
-            <Images src={image} alt="Product" width={60} height={15} />
+            <Images src={image} alt="Product" width={60} height={60} />
 
-            <div className="flex flex-col gap-1 items-center">
+            <div className="flex flex-col gap-1">
               <span>{name}</span>
-              <span className="ds-text-disabled">{category}</span>
+
+              <span className="ds-text-disabled text-sm">
+                {categoryNames || "No Category"}
+              </span>
             </div>
           </div>
         </div>
@@ -59,17 +71,17 @@ export default function ProductCard({
 
       <td className="w-1/6 p-3">
         <span
-          className={`font-medium px-2.5 py-1.5 rounded-sm ${InventoryStyle(
-            inventory
+          className={`rounded-sm px-2.5 py-1.5 font-medium ${getInventoryClass(
+            inventory,
           )}`}
         >
-          {inventory}
+          {getInventoryText(inventory)}
         </span>
       </td>
 
       <td className="w-1/6 p-3">{color}</td>
 
-      <td className="w-1/6 p-3">{price}</td>
+      <td className="w-1/6 p-3">${price}</td>
 
       <td className="w-1/6 p-3">{rating}</td>
     </tr>

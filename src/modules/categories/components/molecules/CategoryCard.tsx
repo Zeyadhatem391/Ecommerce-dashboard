@@ -7,17 +7,17 @@ import Link from "next/link";
 
 interface Props {
   image: StaticImageData;
-  titel: string;
+  title: string;
   numberItems: number;
 }
 
-export default function CategoryCard({ image, titel, numberItems }: Props) {
+export default function CategoryCard({ image, title, numberItems }: Props) {
   return (
     <div className="rounded-md overflow-hidden ds-bg-alt shadow-sm">
       <div className="relative w-full h-56 group overflow-hidden">
         <Images
           src={image}
-          alt={titel}
+          alt={title}
           fill
           className="object-cover transition duration-300 group-hover:scale-105"
         />
@@ -34,7 +34,7 @@ export default function CategoryCard({ image, titel, numberItems }: Props) {
 
       <div className="flex flex-col px-6 py-4">
         <Titel variant="primary" size="lg" className="font-semibold">
-          {titel}
+          {title}
         </Titel>
         <Text variant="disabled">{numberItems} items</Text>
       </div>

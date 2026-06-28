@@ -1,8 +1,8 @@
 "use client";
 
-import { Product } from "@/app/(pages)/products/add-product/page";
 import Titel from "@/shared/components/atoms/Titel";
 import SwitchText from "@/shared/components/molecules/SwitchText";
+import { Product } from "../../types/type";
 
 interface Props {
   product: Product;

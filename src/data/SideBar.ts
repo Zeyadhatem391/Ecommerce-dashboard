@@ -9,7 +9,6 @@ import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineInventory2 } from "react-icons/md";
 import { HiOutlineDocumentReport } from "react-icons/hi";
 import { RiCoupon3Line } from "react-icons/ri";
-import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 import { CiSettings } from "react-icons/ci";
 
 export const menus = [
