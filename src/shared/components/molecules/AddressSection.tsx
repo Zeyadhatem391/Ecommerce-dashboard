@@ -1,7 +1,7 @@
 import Titel from "../atoms/Titel";
 
 interface Props {
-  titel: string;
+  titel?: string;
   textButton?: string;
 }
 

@@ -9,9 +9,10 @@ interface Props {
   image: StaticImageData;
   title: string;
   numberItems: number;
+  nameRoute:string;
 }
 
-export default function CategoryCard({ image, title, numberItems }: Props) {
+export default function CategoryCard({ image, title, numberItems , nameRoute }: Props) {
   return (
     <div className="rounded-md overflow-hidden ds-bg-alt shadow-sm">
       <div className="relative w-full h-56 group overflow-hidden">
@@ -23,7 +24,7 @@ export default function CategoryCard({ image, title, numberItems }: Props) {
         />
 
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-          <Link href="categories/edit-category">
+          <Link href={`categories/${nameRoute}`}>
             <button className="flex items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-gray-100 transition">
               <Pencil size={16} />
               Edit

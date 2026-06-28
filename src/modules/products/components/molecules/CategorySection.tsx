@@ -36,10 +36,6 @@ export default function CategorySection({ product, setProduct }: Props) {
           />
         ))}
       </div>
-
-      <button className="mt-6 w-full rounded-lg border border-dashed border-gray-300 py-3 transition hover:bg-gray-100">
-        + Create New
-      </button>
     </div>
   );
 }
