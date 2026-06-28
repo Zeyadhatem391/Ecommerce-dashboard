@@ -1,7 +1,6 @@
 import Titel from "@/shared/components/atoms/Titel";
 import Link from "next/link";
 import CardsCategory from "../molecules/CardsCategory";
-// import { categories } from "../../data/Categories";
 
 export default function LeftAddCategoy({ id }: { id?: string }) {
   return (

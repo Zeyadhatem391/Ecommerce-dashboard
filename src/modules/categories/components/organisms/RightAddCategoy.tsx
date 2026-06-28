@@ -1,7 +1,6 @@
 import Text from "@/shared/components/atoms/Text";
 import Titel from "@/shared/components/atoms/Titel";
 import SwitchText from "@/shared/components/molecules/SwitchText";
-import React from "react";
 
 export default function RightAddCategoy() {
   return (

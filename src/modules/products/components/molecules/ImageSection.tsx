@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Text from "@/shared/components/atoms/Text";
 import Titel from "@/shared/components/atoms/Titel";
 import { Product } from "../../types/type";
+import Image from "next/image";
 
 interface Props {
   product: Product;
@@ -52,9 +53,10 @@ export default function ImageSection({ product, setProduct }: Props) {
         className="flex h-60 w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-gray-300 transition hover:border-black"
       >
         {product.image ? (
-          <img
+          <Image
             src={product.image}
             alt="Preview"
+            fill
             className="h-full w-full object-cover"
           />
         ) : (
