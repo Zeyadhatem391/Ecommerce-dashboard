@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 
 export interface Product {
-  id?: string;
-  name?: string;
+  id: string;
+  name: string;
   description?: string;
-  image?: string | StaticImageData;
+  image: string | StaticImageData;
   inventory?: string;
   price?: string;
   discountPrice?: string;
@@ -12,7 +12,7 @@ export interface Product {
   weight?: string;
   country?: string;
   digital?: boolean;
-  categoryId?: string[];
+  categoryId: string[];
   color?: string;
   tags?: string[];
   rating?: string;
