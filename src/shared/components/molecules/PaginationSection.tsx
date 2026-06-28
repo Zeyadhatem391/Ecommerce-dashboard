@@ -1,4 +1,4 @@
-import { Product } from "@/app/(pages)/products/add-product/page";
+
 import {
   Pagination,
   PaginationContent,
@@ -8,7 +8,7 @@ import {
   PaginationNext,
 } from "@/components/ui/pagination";
 
-export default function PaginationSection({ number }: { number: number }) {
+export default function PaginationSection({ number }: { number?: number }) {
   return (
     <div className="flex items-center justify-between mt-5 px-2">
       <div className="flex items-center">
