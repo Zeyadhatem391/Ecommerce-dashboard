@@ -4,10 +4,10 @@ import OrderCard from "@/modules/orders/components/molecules/OrderCard";
 import PaginationSection from "@/shared/components/molecules/PaginationSection";
 import Toolbar from "@/shared/components/molecules/Toolbar";
 
-import { orderData } from "@/data/Orders";
+import { orderData } from "@/modules/orders/data/Orders";
 import ButtonsExport from "@/shared/components/molecules/ButtonsExport";
 import TableHeader from "@/shared/components/molecules/TableHeader";
-import { orderColumns } from "@/data/TablesHead";
+import { orderColumns } from "@/shared/data/TablesHead";
 
 
 

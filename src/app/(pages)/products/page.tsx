@@ -10,7 +10,7 @@ import Toolbar from "@/shared/components/molecules/Toolbar";
 import { productData } from "@/modules/products/data/Products";
 import ButtonsExport from "@/shared/components/molecules/ButtonsExport";
 import TableHeader from "@/shared/components/molecules/TableHeader";
-import { productColumns } from "@/data/TablesHead";
+import { productColumns } from "@/shared/data/TablesHead";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState(productData);

@@ -5,7 +5,7 @@ import Toolbar from "@/shared/components/molecules/Toolbar";
 import { customerData } from "@/modules/customers/data/Customer";
 import CustomerCard from "@/modules/customers/components/molecules/CustomerCard";
 import TableHeader from "@/shared/components/molecules/TableHeader";
-import { customerColumns } from "@/data/TablesHead";
+import { customerColumns } from "@/shared/data/TablesHead";
 import ButtonsExport from "@/shared/components/molecules/ButtonsExport";
 
 export default function CustomersPage() {

@@ -5,7 +5,7 @@ import PaginationSection from "@/shared/components/molecules/PaginationSection";
 import Toolbar from "@/shared/components/molecules/Toolbar";
 import { couponData } from "@/modules/coupons/data/Coupons";
 import TableHeader from "@/shared/components/molecules/TableHeader";
-import { couponColumns } from "@/data/TablesHead";
+import { couponColumns } from "@/shared/data/TablesHead";
 import ButtonsExport from "@/shared/components/molecules/ButtonsExport";
 
 export default function CouponsPage() {

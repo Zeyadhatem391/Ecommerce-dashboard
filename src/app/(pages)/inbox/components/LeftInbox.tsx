@@ -1,6 +1,6 @@
 import Images from "@/shared/components/atoms/Image";
 import Titel from "@/shared/components/atoms/Titel";
-import { inboxData } from "@/data/Inbox";
+import { inboxData } from "@/modules/inbox/data/Inbox";
 
 
 export default function LeftInbox() {

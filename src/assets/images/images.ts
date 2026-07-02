@@ -11,7 +11,19 @@ import SpringCollection from "./categories/spring-collection.png"
 import CasualClothes from "./categories/casual-clothes.png"
 import Hats from "./categories/hats.png"
 
+import GettingStarted from "./knowledge/getting-started.png"
+import Settings from "./knowledge/settings.png"
+import Pricing  from "./knowledge/billing.png"
+import Commerce from "./knowledge/commerce.png"
+
+import Portfolio from "@/assets/images/Portfolio.png"
 
 
 
-export { Product1, Email, MenClothes, WomenClothes, Accessories, CottonClothes, SummerClothes, WeddingClothes, SpringCollection, CasualClothes, Hats }
+
+
+export {
+    Product1, Email, MenClothes, WomenClothes, Accessories,
+    CottonClothes, SummerClothes, WeddingClothes, SpringCollection,
+    CasualClothes, Hats, GettingStarted, Settings, Pricing, Commerce , Portfolio
+}

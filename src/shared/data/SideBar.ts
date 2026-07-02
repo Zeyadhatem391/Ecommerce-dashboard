@@ -1,4 +1,9 @@
-import { BiBookOpen, BiCategory, BiDollarCircle, BiHome, BiMessageDetail, BiUser, CiSettings, FiShoppingCart, HiOutlineDocumentReport, MdOutlineInventory2, RiCoupon3Line } from "@/assets/icons/icons";
+import { BiBookOpen, BiCategory, BiDollarCircle, BiHome,
+     BiMessageDetail, BiUser, CiSettings, FiShoppingCart, 
+     HiOutlineDocumentReport, MdOutlineInventory2, RiCoupon3Line,
+     RiInformationLine 
+    
+    } from "@/assets/icons/icons";
 
 
 export const menus = [
@@ -20,4 +25,12 @@ export const settings = [
     { icon: BiDollarCircle, name: "Pricing", link: "/pricing" },
     { icon: CiSettings, name: "Settings", link: "/settings" },
 
+];
+
+export const aboutMe = [
+    {
+        icon: RiInformationLine,
+        name: "About",
+        link: "/about",
+    },
 ];

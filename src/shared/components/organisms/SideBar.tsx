@@ -1,4 +1,4 @@
-import { menus, info, settings } from "@/data/SideBar";
+import { menus, info, settings, aboutMe } from "@/shared/data/SideBar";
 
 export default function SideBar() {
   return (
@@ -53,6 +53,30 @@ export default function SideBar() {
           <p className="text-gray-300 px-4">Settings</p>
           <ul className="flex flex-col ">
             {settings.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <li key={index}>
+                  <a
+                    href={item.link}
+                    className="group flex items-center gap-3 px-4 py-3 rounded-xl
+                    ds-text-base transition-all duration-300
+                    hover:bg-white/10 hover:translate-x-1"
+                  >
+                    <Icon className="w-5 h-5 opacity-80 group-hover:opacity-100 transition" />
+                    <span className="text-sm font-medium tracking-wide">
+                      {item.name}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-gray-300 px-4">Public</p>
+          <ul className="flex flex-col ">
+            {aboutMe.map((item, index) => {
               const Icon = item.icon;
               return (
                 <li key={index}>
