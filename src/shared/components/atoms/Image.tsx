@@ -24,7 +24,6 @@ export default function Images({
     <Image
       src={src}
       alt={alt}
-      quality={100}
       fill={fill}
       width={!fill ? width : undefined}
       height={!fill ? height : undefined}

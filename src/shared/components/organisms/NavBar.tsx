@@ -7,7 +7,7 @@ import Button from "../atoms/Button";
 export default function NavBar() {
   return (
     <div className="w-full h-15 ds-bg-navbar px-10 flex items-center justify-between">
-      <Images src={Logo} alt="logo" />
+      <Images src={Logo} alt="logo" priority/>
 
       <div className="flex items-center gap-4">
         <div className="cursor-pointer p-2 ">

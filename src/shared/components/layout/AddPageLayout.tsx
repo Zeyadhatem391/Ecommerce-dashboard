@@ -20,7 +20,7 @@ export default function AddPageLayout({
     <DashbordLayout>
       <BackPage />
 
-      <div className="flex justify-between mb-8">
+      <div className="flex justify-between mb-6">
         <AddressSection titel={titel} />
 
         <ButtonsExport

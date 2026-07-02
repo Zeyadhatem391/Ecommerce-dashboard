@@ -1,15 +1,5 @@
-import {
-    BiHome,
-    BiCategory,
-    BiUser,
-    BiMessageDetail,
-    BiBookOpen,
-} from "react-icons/bi";
-import { FiShoppingCart } from "react-icons/fi";
-import { MdOutlineInventory2 } from "react-icons/md";
-import { HiOutlineDocumentReport } from "react-icons/hi";
-import { RiCoupon3Line } from "react-icons/ri";
-import { CiSettings } from "react-icons/ci";
+import { BiBookOpen, BiCategory, BiDollarCircle, BiHome, BiMessageDetail, BiUser, CiSettings, FiShoppingCart, HiOutlineDocumentReport, MdOutlineInventory2, RiCoupon3Line } from "@/assets/icons/icons";
+
 
 export const menus = [
     { icon: BiHome, name: "Dashboard", link: "/" },
@@ -27,6 +17,7 @@ export const info = [
 ];
 
 export const settings = [
-    { icon: BiUser, name: "Personal Settings", link: "/personal-settings" },
-    { icon: CiSettings, name: "Global Settings", link: "/global-settings" },
+    { icon: BiDollarCircle, name: "Pricing", link: "/pricing" },
+    { icon: CiSettings, name: "Settings", link: "/settings" },
+
 ];

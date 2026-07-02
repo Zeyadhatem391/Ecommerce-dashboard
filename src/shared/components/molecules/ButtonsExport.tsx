@@ -10,6 +10,7 @@ interface ButtonsExportProps {
   isIcon?: boolean;
   onSave?: () => void;
   onCancel?: () => void;
+  isExport?: boolean;
 }
 
 export default function ButtonsExport({
@@ -19,19 +20,21 @@ export default function ButtonsExport({
   isIcon = false,
   onSave,
   onCancel,
+  isExport = true,
 }: ButtonsExportProps) {
   return (
     <div className="flex gap-3">
-      <Button
-        size="sm"
-        variant="outline1"
-        className="font-semibold"
-        tag="button"
-        onClick={onCancel}
-      >
-        {nameButton}
-      </Button>
-
+      {isExport && (
+        <Button
+          size="sm"
+          variant="outline1"
+          className="font-semibold"
+          tag="button"
+          onClick={onCancel}
+        >
+          {nameButton}
+        </Button>
+      )}
       <Button
         size="sm"
         variant="primary"
